@@ -1,6 +1,6 @@
 {
   "name": "primus852/simple-stopwatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Stopwatch in PHP",
   "type": "package",
   "require": {
