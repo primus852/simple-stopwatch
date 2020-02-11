@@ -15,13 +15,13 @@ class Stopwatch
 
 
     /**
-     * @param \DateTime $time
+     * @param \DateTime|\DateTimeInterface $time
      * @param bool $format_output
      * @param string $format
      * @return float|int|string
      * @throws StopwatchException
      */
-    public static function stop(\DateTime $time, bool $format_output = false, string $format = 's')
+    public static function stop($time, bool $format_output = false, string $format = 's')
     {
         $end = \DateTime::createFromFormat('U.u', microtime(true));
         $interval = $time->diff($end);
@@ -40,12 +40,12 @@ class Stopwatch
     }
 
     /**
-     * @param \DateTime $start
+     * @param \DateTime|\DateTimeInterface $start
      * @param $format
      * @return float|int|string
      * @throws StopwatchException
      */
-    private static function format_output(\DateTime $start, $format)
+    private static function format_output($start, $format)
     {
 
         $end = new \DateTime();
